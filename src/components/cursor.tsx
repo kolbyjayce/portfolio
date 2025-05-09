@@ -1,3 +1,5 @@
+import styles from "./cursor.module.css";
+
 export function Cursor() {
-  return <>|</>;
+  return <div className={styles.blink}>|</div>;
 }

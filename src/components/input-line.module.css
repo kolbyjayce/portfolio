@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    gap: 0.5rem;
+    white-space: pre;
+    padding: 8px;
+}
+
+.line {
+    display: flex;
+    align-items: center;
+}
+
+.prompt {
+    color: #00ff00;
+}
+
+.input {
+    color: white;
+}
