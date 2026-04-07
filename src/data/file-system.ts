@@ -141,10 +141,10 @@ Happy exploring!`
           'skills.txt': {
             name: 'skills.txt',
             type: 'file',
-            content: `🔧 KOLBY CHRISTIANSEN - TECHNICAL SKILLS
+            content: `KOLBY CHRISTIANSEN - TECHNICAL SKILLS
 ========================================
 
-📋 PROGRAMMING LANGUAGES
+PROGRAMMING LANGUAGES
 • TypeScript (Expert) - Production systems at Spudnik
 • JavaScript (Expert) - Full-stack development
 • Python (Advanced) - AI/ML, automation scripts
@@ -156,15 +156,15 @@ Happy exploring!`
 • SQL (Advanced) - Database optimization
 • PHP (Advanced) - Legacy system modernization
 
-🚀 FRAMEWORKS & TECHNOLOGIES
+FRAMEWORKS & TECHNOLOGIES
 • React (Expert) - Component optimization, 70% bundle reduction
-• React Native (Expert) - GrosToGo iOS app, offline-first architecture
 • Express.js (Expert) - RESTful APIs, 10k+ daily requests
 • Node.js (Expert) - Custom streaming compression package
 • Flask (Advanced) - Python web services
-• Jest (Advanced) - 95% code coverage, 50+ tRPC endpoints
+• React Native (Advanced) - GrosToGo iOS app, offline-first architecture
+• Jest/Vitest (Advanced) - 95% code coverage, 50+ tRPC endpoints
 
-☁️ INFRASTRUCTURE & TOOLS
+INFRASTRUCTURE & TOOLS
 • AWS EC2 (Advanced) - Production deployments, infrastructure
 • Docker (Expert) - Zero-downtime rolling updates, containerization
 • Redis (Advanced) - Real-time telemetry pipeline caching
@@ -172,14 +172,14 @@ Happy exploring!`
 • tRPC (Expert) - Type-safe APIs, 50+ endpoints
 • PostgreSQL (Expert) - Query optimization, <100ms response times
 
-🎯 SPECIALIZED TECHNOLOGIES
+SPECIALIZED TECHNOLOGIES
 • WebSockets (Expert) - Real-time telemetry for 300+ machines
-• Keras & TensorFlow (Advanced) - CNN classification, 90% accuracy
+• Keras & TensorFlow (Intermediate) - CNN classification, 90% accuracy
 • Instacart API (Intermediate) - Automated grocery ordering
 • JWT & Session Auth (Expert) - Secure authentication systems
 • ERP Integration (Advanced) - Automated workflows, part management
 
-📊 KEY ACHIEVEMENTS
+KEY ACHIEVEMENTS
 • 40% faster compression vs jszip for 500MB+ directories
 • Reduced API response times to <100ms with optimization
 • 70% reduction in initial bundle size through optimization
@@ -187,7 +187,7 @@ Happy exploring!`
 • 90%+ accuracy in CNN-based vegetable classification
 • 5 days → 8 hours: Engineering change implementation time
 
-🌍 BUSINESS IMPACT
+BUSINESS IMPACT
 • 300+ machines across 5 countries supported
 • 250+ part revisions processed per week
 • 10,000+ daily API requests handled
@@ -195,15 +195,14 @@ Happy exploring!`
 • 45 high-severity CVEs resolved
 • $50K annually projected savings per machine
 
-🎪 SPECIALIZATIONS
+SPECIALIZATIONS
 • Real-time telemetry systems
 • Legacy system modernization
 • Performance optimization
 • Agricultural technology
 • AI/ML integration
 • Offline-first mobile architecture
-
-For detailed project implementations, type: cat projects.txt`
+`
           },
 
           'projects.txt': {

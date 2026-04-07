@@ -64,11 +64,12 @@ export const skillsCommand: Command = {
           output += `${section.charAt(0).toUpperCase() + section.slice(1)}:\n`;
 
           if (Array.isArray(items)) {
-            items.forEach((item: any) => {
-              if (typeof item === 'object' && item.name) {
-                output += `  • ${item.name}`;
-                if (item.level) output += ` (${item.level})`;
-                if (item.years) output += ` - ${item.years} year${item.years !== 1 ? 's' : ''}`;
+            items.forEach((item: unknown) => {
+              if (typeof item === 'object' && item !== null && 'name' in item) {
+                const typedItem = item as { name: string; level?: string; years?: number };
+                output += `  • ${typedItem.name}`;
+                if (typedItem.level) output += ` (${typedItem.level})`;
+                if (typedItem.years) output += ` - ${typedItem.years} year${typedItem.years !== 1 ? 's' : ''}`;
                 output += '\n';
               } else {
                 output += `  • ${item}\n`;
@@ -79,7 +80,7 @@ export const skillsCommand: Command = {
         });
 
         return { output: output.trim(), exitCode: 0 };
-      } catch (error) {
+      } catch {
         return {
           output: '',
           error: 'Error parsing skills data',

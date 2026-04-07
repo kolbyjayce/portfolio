@@ -24,7 +24,8 @@ export function ansiToHtml(text: string): string {
   let result = text;
 
   // Handle color codes like \x1b[34m (blue) and \x1b[0m (reset)
-  result = result.replace(/\x1b\[(\d+)m/g, (match, code) => {
+  // eslint-disable-next-line no-control-regex
+  result = result.replace(/\x1b\[(\d+)m/g, (_, code) => {
     if (code === '0') {
       return '</span>'; // Reset - close any open span
     }

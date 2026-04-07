@@ -3,7 +3,7 @@ import { useTerminal } from '../hooks/useTerminal';
 import styles from './welcome-message.module.css';
 
 export function WelcomeMessage() {
-  const { state, executeCommand } = useTerminal();
+  const { state } = useTerminal();
   const [showWelcome, setShowWelcome] = useState(true);
 
   useEffect(() => {

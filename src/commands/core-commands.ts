@@ -244,7 +244,7 @@ export const historyCommand: Command = {
   name: 'history',
   description: 'Show command history',
   category: 'system',
-  execute: (_args: string[], _context: TerminalContext): CommandResult => {
+  execute: (): CommandResult => {
     // This will be implemented when we add the terminal context with history
     return {
       output: 'Command history will be available once terminal state is implemented.',

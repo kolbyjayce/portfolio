@@ -60,7 +60,7 @@ export const sudoCommand: Command = {
   name: 'sudo',
   description: 'Execute commands as another user',
   category: 'hidden',
-  execute: (_args: string[], context: TerminalContext): CommandResult => {
+  execute: (args: string[], context: TerminalContext): CommandResult => {
     if (args.length === 0) {
       return {
         output: 'usage: sudo [-h] command',
@@ -73,43 +73,25 @@ export const sudoCommand: Command = {
     // Fun responses for common sudo commands
     const responses: Record<string, string> = {
       'rm': `
-╭─────────────────────────────────────╮
-│ 🚨 DANGER: DESTRUCTIVE COMMAND 🚨  │
-╰─────────────────────────────────────╯
-
 Nice try! This is a portfolio, not a real terminal.
 No files were harmed in the making of this command.
-
-P.S. - Always be careful with 'rm' in real systems! 😅`,
-
+`,
       'reboot': `
 Rebooting system...
 Just kidding! This is a web portfolio.
-But if it were real, you'd be waiting a few minutes! ⏰`,
+`,
 
       'shutdown': `
 System is shutting down...
 
 Wait, this is just a website!
-Thanks for visiting my portfolio though! 👋`,
+`,
 
       'apt': `
 apt: command not found
 
 This portfolio runs on JavaScript, not Ubuntu!
-Try 'npm' instead... just kidding, that won't work either! 😄`,
-
-      'yum': `
-yum: command not found
-
-Wrong package manager for a React portfolio!
-Maybe try 'npm install happiness'? 📦`,
-
-      'pacman': `
-pacman: command not found
-
-Waka waka waka! 👻
-This isn't Arch Linux, it's a web portfolio!`
+Try 'npm' instead... `,
     };
 
     if (responses[command]) {
@@ -127,8 +109,7 @@ Sorry, try again.
 [sudo] password for ${context.user}:
 Sorry, try again.
 sudo: 3 incorrect password attempts
-
-Just kidding! This is a portfolio website, not a real terminal! 😉`,
+`,
       exitCode: 1
     };
   }
@@ -145,15 +126,15 @@ export const exitCommand: Command = {
 Thank you for visiting my terminal portfolio! 🎉
 
 ╔════════════════════════════════════════════════════╗
-║  Thanks for exploring my interactive portfolio!   ║
+║  Thanks for exploring my interactive portfolio!    ║
 ║                                                    ║
-║  💼 Liked what you saw? Let's connect!            ║
-║  📧 Email: kolby@example.com                      ║
-║  🔗 LinkedIn: linkedin.com/in/kolby-dev           ║
-║  🐙 GitHub: github.com/kolby                      ║
+║  💼 Liked what you saw? Let's connect!             ║
+║  📧 Email: hi@kolby.sh                             ║
+║  🔗 LinkedIn: linkedin.com/in/kolbychristiansen    ║
+║  🐙 GitHub: github.com/kolbyjayce                  ║
 ║                                                    ║
-║  Type 'clear' to start fresh or just refresh      ║
-║  the page to begin again!                         ║
+║  Type 'clear' to start fresh or just refresh       ║
+║  the page to begin again!                          ║
 ╚════════════════════════════════════════════════════╝
 
 Connection to kolby-portfolio closed.`,
@@ -200,7 +181,7 @@ export const uptimeCommand: Command = {
       output: `Portfolio up ${timeStr}, 1 user, load average: 0.42, 0.36, 0.31
 
 Fun fact: I've been coding professionally for 4+ years!
-This portfolio has been running smoothly since you opened it! ⚡`,
+This portfolio has been running smoothly since you opened it!`,
       exitCode: 0
     };
   }
