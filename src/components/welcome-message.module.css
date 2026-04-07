@@ -1,0 +1,120 @@
+.welcome {
+  padding: 3rem 0;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.ascii {
+  font-family: 'Courier New', monospace;
+  font-size: 0.6rem;
+  line-height: 1.1;
+  margin: 0 auto;
+  color: #00ff41;
+  text-shadow: 0 0 5px #00ff41;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@media (max-width: 768px) {
+  .ascii {
+    font-size: 0.35rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ascii {
+    font-size: 0.25rem;
+  }
+}
+
+.subtitle {
+  margin-top: 1.5rem;
+  color: #cccccc;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #00ff41;
+  font-weight: 500;
+}
+
+.motd {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: rgba(0, 255, 65, 0.05);
+  border: 1px solid rgba(0, 255, 65, 0.3);
+  border-radius: 4px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.motdContent {
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.motdContent p {
+  margin: 0.4rem 0;
+  color: #c9d1d9;
+}
+
+@media (max-width: 768px) {
+  .motd {
+    margin: 1rem 0.5rem;
+    padding: 0.75rem;
+  }
+
+  .motdHeader {
+    font-size: 0.6rem;
+  }
+
+  .motdContent {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .motd {
+    margin: 0.75rem 0.25rem;
+    padding: 0.5rem;
+  }
+
+  .motdContent {
+    font-size: 0.7rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #00ff41, 0 0 10px #00ff41;
+  }
+  to {
+    text-shadow: 0 0 10px #00ff41, 0 0 15px #00ff41, 0 0 20px #00ff41;
+  }
+}
+
+@keyframes dots {
+  0%, 20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  80%, 100% {
+    opacity: 0;
+  }
+}

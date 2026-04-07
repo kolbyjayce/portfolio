@@ -1,0 +1,83 @@
+.history {
+  font-family: 'Courier New', monospace;
+  line-height: 1.4;
+}
+
+.entry {
+  margin-bottom: 0.5rem;
+}
+
+.command {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.prompt {
+  color: #00ff00;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.commandText {
+  color: #ffffff;
+  word-break: break-all;
+}
+
+.output {
+  color: #cccccc;
+  margin: 0;
+  padding: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: inherit;
+  background: transparent;
+  border: none;
+}
+
+.error {
+  color: #ff4444;
+  font-style: italic;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .command {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .prompt {
+    font-size: 0.85rem;
+  }
+
+  .commandText {
+    font-size: 0.85rem;
+    word-break: break-word;
+  }
+
+  .output {
+    font-size: 0.8rem;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .prompt {
+    font-size: 0.75rem;
+  }
+
+  .commandText {
+    font-size: 0.75rem;
+  }
+
+  .output {
+    font-size: 0.75rem;
+  }
+
+  .entry {
+    margin-bottom: 0.75rem;
+  }
+}

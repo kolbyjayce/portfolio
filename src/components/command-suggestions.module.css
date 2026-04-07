@@ -1,0 +1,173 @@
+.container {
+  margin-top: 1rem;
+  padding: 1rem 0 0 0;
+  font-family: 'Courier New', monospace;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.headerIcon {
+  font-size: 1rem;
+}
+
+.headerText {
+  color: #00ff41;
+  font-weight: 600;
+}
+
+.helpText {
+  color: #888888;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.buttonGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.commandButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.75rem 0.5rem;
+  background: rgba(13, 17, 23, 0.8);
+  border: 1px solid #21262d;
+  border-radius: 4px;
+  color: #c9d1d9;
+  font-family: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 60px;
+  justify-content: center;
+}
+
+.commandButton:hover {
+  background: rgba(0, 255, 65, 0.1);
+  border-color: rgba(0, 255, 65, 0.5);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 255, 65, 0.2);
+}
+
+.commandButton:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 4px rgba(0, 255, 65, 0.3);
+}
+
+.buttonIcon {
+  font-size: 1.2rem;
+  margin-bottom: 0.125rem;
+}
+
+.buttonLabel {
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.footer {
+  text-align: center;
+  padding-top: 0.75rem;
+}
+
+.footerText {
+  color: #888888;
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .container {
+    margin-top: 0.75rem;
+    padding: 0.75rem 0 0 0;
+  }
+
+  .buttonGrid {
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 0.5rem;
+  }
+
+  .commandButton {
+    padding: 0.6rem 0.4rem;
+    font-size: 0.75rem;
+    min-height: 55px;
+  }
+
+  .buttonIcon {
+    font-size: 1rem;
+  }
+
+  .headerText {
+    font-size: 0.85rem;
+  }
+
+  .helpText {
+    font-size: 0.7rem;
+  }
+
+  .footerText {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    margin-top: 0.5rem;
+    padding: 0.5rem 0 0 0;
+  }
+
+  .buttonGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.4rem;
+  }
+
+  .commandButton {
+    padding: 0.5rem 0.3rem;
+    font-size: 0.7rem;
+    min-height: 50px;
+  }
+
+  .buttonIcon {
+    font-size: 0.9rem;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .headerText {
+    font-size: 0.8rem;
+  }
+
+  .helpText {
+    font-size: 0.65rem;
+  }
+
+  .footerText {
+    font-size: 0.65rem;
+  }
+}
+
+/* Accessibility improvements */
+.commandButton:focus {
+  outline: 2px solid #00ff41;
+  outline-offset: 2px;
+}
+
+.commandButton:focus:not(:focus-visible) {
+  outline: none;
+}

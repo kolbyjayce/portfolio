@@ -1,27 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
-    font-family: monospace;
+    font-family: 'Courier New', 'Monaco', 'Menlo', 'Lucida Console', monospace;
     line-height: 1.5;
     font-weight: 400;
+    font-size: 14px;
 
-    color-scheme: light dark;
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
+    color-scheme: dark;
+    color: #c9d1d9;
+    background-color: #0d1117;
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
 }
 
-@media (prefers-color-scheme: light) {
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: #0d1117;
+    color: #c9d1d9;
+    font-family: inherit;
+    overflow-x: hidden;
+}
+
+#root {
+    min-height: 100vh;
+}
+
+/* Remove default focus outline and add custom one */
+*:focus {
+    outline: none;
+}
+
+input:focus,
+button:focus,
+[tabindex]:focus {
+    outline: 2px solid #00ff41;
+    outline-offset: 2px;
+}
+
+/* Custom selection colors */
+::selection {
+    background: rgba(0, 255, 65, 0.3);
+    color: #ffffff;
+}
+
+::-moz-selection {
+    background: rgba(0, 255, 65, 0.3);
+    color: #ffffff;
+}
+
+/* Ensure text is always selectable */
+.selectable {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+/* Hide scrollbars but keep functionality */
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Terminal-specific utilities */
+.terminal-green {
+    color: #00ff41;
+}
+
+.terminal-blue {
+    color: #4a9eff;
+}
+
+.terminal-yellow {
+    color: #ffff00;
+}
+
+.terminal-red {
+    color: #ff4444;
+}
+
+.terminal-cyan {
+    color: #00ffff;
+}
+
+.terminal-magenta {
+    color: #ff00ff;
+}
+
+/* Responsive font sizes */
+@media (max-width: 768px) {
     :root {
-        color: #213547;
-        background-color: #ffffff;
+        font-size: 12px;
     }
-    a:hover {
-        color: #747bff;
-    }
-    button {
-        background-color: #f9f9f9;
+}
+
+@media (max-width: 480px) {
+    :root {
+        font-size: 11px;
     }
 }

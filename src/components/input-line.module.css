@@ -2,7 +2,7 @@
     display: flex;
     gap: 0.5rem;
     white-space: pre;
-    padding: 8px;
+    align-items: baseline;
 }
 
 .line {
@@ -16,4 +16,29 @@
 
 .input {
     color: white;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .container {
+        gap: 0.25rem;
+    }
+
+    .prompt {
+        font-size: 0.85rem;
+    }
+
+    .input {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .prompt {
+        font-size: 0.75rem;
+    }
+
+    .input {
+        font-size: 0.75rem;
+    }
 }
